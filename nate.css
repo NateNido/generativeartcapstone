@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: #607399;
+	font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+  height: 100%;
+  width:100%;
+}
+
+.container {
+	width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+div {
+  font-family:'Work Sans', sans-serif;
+  color: white;
+padding: 10px;
+}
+
+header {
+  background: #607399;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sitetitle {
+  float: left;
+  padding: 5px 0;
+
+}
+
+.sitetitle a { /* makes title color white and it loses the blue stuff */
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.sitetitle a:hover { /* makes it so that when you hover over title, it becomes pink */
+  color: #FFCCE5;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block; /* makes it so that the nav is displayed horizontally */
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #FFCCE5;
+}
+
+nav a:before { /* the thing that pops up when you hover over it */
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #FFCCE5;
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover:before { /* necessary for the bar on top to pop up */
+  width: 100%;
+}
+
+/* .container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . ." ". . ." ". . ."
+} */
+
+
+/* EVERYTHING ABOVE THIS LINE IS FOR THE NAV BAR */
+
+canvas {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
